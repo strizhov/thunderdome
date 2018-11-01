@@ -1,1 +1,1 @@
-thunderdome. TODO: add readme
+thunderdome a client/server tool to measure end-to-end bandwidth.
