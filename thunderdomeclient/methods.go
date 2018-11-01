@@ -11,8 +11,6 @@ import (
 	"time"
 
 	"github.com/spacemonkeygo/monotime"
-
-	"sm/space/utils/socket"
 )
 
 var (
@@ -51,13 +49,6 @@ func (c *Client) getDownloadBandwidth(ctx context.Context,
 		return err
 	}
 	defer conn.Close()
-
-	// set "cubic" for network transport
-	err = socket.SetHighPriority(conn, true)
-	if err != nil {
-		results <- 0
-		return err
-	}
 
 	// Set a deadline for writing to socket
 	conn.SetReadDeadline(time.Now().Add(*serverConnectionTimeout))
@@ -108,13 +99,6 @@ func (c *Client) getUploadBandwidth(ctx context.Context,
 		return err
 	}
 	defer conn.Close()
-
-	// set "cubic" for network transport
-	err = socket.SetHighPriority(conn, true)
-	if err != nil {
-		results <- 0
-		return err
-	}
 
 	// Set a deadline for writing to socket
 	conn.SetWriteDeadline(time.Now().Add(*serverConnectionTimeout))

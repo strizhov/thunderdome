@@ -6,7 +6,7 @@ import (
 	"context"
 	"flag"
 
-	"sm/tools/thunderdome"
+	"github.com/strizhov/thunderdome"
 )
 
 var (
