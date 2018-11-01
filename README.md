@@ -1,1 +1,1 @@
-thunderdome a client/server tool to measure end-to-end bandwidth.
+thunderdome: a client/server tool to measure end-to-end bandwidth.
