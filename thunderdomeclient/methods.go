@@ -17,23 +17,23 @@ import (
 
 var (
 	serverDialTimeout = flag.Duration(
-		"fabric.thunderdome.thunderdomeclient.server_dial_timeout",
+		"thunderdomeclient.server_dial_timeout",
 		60*time.Second,
 		"time to dial to the server")
 	serverConnectionTimeout = flag.Duration(
-		"fabric.thunderdome.thunderdomeclient.server_connection_timeout",
+		"thunderdomeclient.server_connection_timeout",
 		120*time.Second,
 		"client time out for write to the server socket")
 	uploadTestDataSize = flag.Int(
-		"fabric.thunderdome.thunderdomeclient.upload_test_data_size",
+		"thunderdomeclient.upload_test_data_size",
 		1024*1024, // 1Mib
 		"size of test data we will send to server")
 	downloadMaxBufferSize = flag.Int(
-		"fabric.thunderdome.thunderdomeclient.download_max_buffer_size",
+		"thunderdomeclient.download_max_buffer_size",
 		1024*1024, // 1Mib
 		"size of the max download allowed")
 	downloadMaxBufferSizePerSocketRead = flag.Int(
-		"fabric.thunderdome.thunderdomeclient."+
+		"thunderdomeclient."+
 			"download_max_buffer_size_per_socket_read",
 		4096,
 		"size of buffer to read from socket")

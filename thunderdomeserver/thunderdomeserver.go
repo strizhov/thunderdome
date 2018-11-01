@@ -12,23 +12,23 @@ import (
 
 var (
 	serverKeepAlivePeriod = flag.Duration(
-		".server_keep_alive_period",
+		"thunderdomeserver.server_keep_alive_period",
 		30*time.Second,
 		"duration to set for tcp keep alive period on uptime sockets")
 	serverConnectionTimeout = flag.Duration(
-		"server_connection_timeout",
+		"thundersdomeserver.server_connection_timeout",
 		120*time.Second,
 		"server time to wait for data from the connection")
 	uploadMaxBufferSize = flag.Int(
-		".upload_max_buffer_size",
+		"thunderdomeserver.upload_max_buffer_size",
 		40960000, // 40.96 Mbytes
 		"size of the max upload allowed")
 	uploadMaxBufferSizePerSocketRead = flag.Int(
-		"upload_max_buffer_size_per_socket_read",
+		"thunderdome.upload_max_buffer_size_per_socket_read",
 		4096,
 		"size of buffer to read from socket")
 	downloadMaxTestDataSize = flag.Int(
-		"download_max_test_data_size",
+		"thunderdome.download_max_test_data_size",
 		10240000, // 10.24 MBytes
 		"size of the file used in download server")
 )

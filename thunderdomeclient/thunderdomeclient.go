@@ -11,7 +11,7 @@ import (
 
 var (
 	concurrentConnectionNumber = flag.Int(
-		"fabric.thunderdome.thunderdomeclient.concurrent_connection_number",
+		"thunderdomeclient.concurrent_connection_number",
 		3,
 		"number of concurrent connections to the server")
 )
