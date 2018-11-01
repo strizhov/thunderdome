@@ -24,11 +24,11 @@ var (
 		40960000, // 40.96 Mbytes
 		"size of the max upload allowed")
 	uploadMaxBufferSizePerSocketRead = flag.Int(
-		"thunderdome.upload_max_buffer_size_per_socket_read",
+		"thunderdomeserver.upload_max_buffer_size_per_socket_read",
 		4096,
 		"size of buffer to read from socket")
 	downloadMaxTestDataSize = flag.Int(
-		"thunderdome.download_max_test_data_size",
+		"thunderdomeserver.download_max_test_data_size",
 		10240000, // 10.24 MBytes
 		"size of the file used in download server")
 )
