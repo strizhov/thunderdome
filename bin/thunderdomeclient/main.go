@@ -11,6 +11,7 @@ import (
 	"syscall"
 
 	"github.com/spacemonkeygo/errors"
+	"github.com/spacemonkeygo/flagfile"
 	"github.com/spacemonkeygo/spacelog"
 	monkit "gopkg.in/spacemonkeygo/monkit.v2"
 
@@ -34,6 +35,8 @@ var (
 )
 
 func main() {
+	flagfile.Load()
+
 	// create the parent context
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
