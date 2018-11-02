@@ -15,4 +15,3 @@ var (
 	logger = spacelog.GetLogger()
 	mon    = monkit.Package()
 )
-
